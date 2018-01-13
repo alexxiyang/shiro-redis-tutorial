@@ -118,3 +118,8 @@ securityManager.realm = $exampleRealm
 ```
 
 Done!
+
+If you found any problems
+=========================
+
+Please send email to alexxiyang@gmail.com
