@@ -44,10 +44,9 @@ Then you will see the successful page:
 
 It means shiro use redis as its session and cache solution successfully.
 
-What did this tutorial project do?
-==================================
-From this tutorial, we can know that if you want to use shiro-redis.
-You need to following these steps:
+How to add shiro-redis to your project?
+=======================================
+From this tutorial, we can know that you if you want to use shiro-redis, you need to following these steps:
 1. Add shiro-redis dependency. (I assume you already shiro dependencies):
 ```XML
 <!-- shiro-redis dependencies -->
