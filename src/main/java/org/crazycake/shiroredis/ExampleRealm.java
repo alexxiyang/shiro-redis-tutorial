@@ -1,6 +1,8 @@
 package org.crazycake.shiroredis;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import javax.annotation.PostConstruct;
 
@@ -27,7 +29,9 @@ public class ExampleRealm extends AuthorizingRealm {
 			PrincipalCollection principals) {
 		SimpleAuthorizationInfo authInfo = new SimpleAuthorizationInfo();
 		// only for tutorial
-		authInfo.addRoles(Arrays.asList("schwartz"));
+		List<String> roles = new ArrayList<String>();
+		roles.add("schwartz");
+		authInfo.addRoles(roles);
 		return authInfo;
 	}
 

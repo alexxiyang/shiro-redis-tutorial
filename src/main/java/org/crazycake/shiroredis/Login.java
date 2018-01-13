@@ -28,7 +28,7 @@ public class Login extends HttpServlet {
 	/**
 	 * Use shiro-redis to handle session and cached
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
 		
 		Subject currentUser = SecurityUtils.getSubject();
