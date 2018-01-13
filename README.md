@@ -30,13 +30,16 @@ mvn jetty:run
 ```
 
 4. Visit `http://localhost:8080`, you will see login page:
+
 ![login page](images/login_page.png)
 
 5. Use the username and password wrote on login page to sign in.
 Then you will see the successful page:
+
 ![login success](images/login_success.png)
 
 6. Use redis client to check redis data. For example, use Redis Desktop Manager:
+
 ![redis data](images/redis_data.png)
 
 It means shiro use redis as its session and cache solution successfully.
