@@ -80,5 +80,6 @@ public class Login extends HttpServlet {
         response.getWriter().println("<p>You will see the following keys:");
         response.getWriter().println("<p>shiro:cache:admin");
         response.getWriter().println("<p>shiro:session:" + session.getId());
+        response.getWriter().println("<p><a href=\"/logout\">LogOut</a>");
     }
 }

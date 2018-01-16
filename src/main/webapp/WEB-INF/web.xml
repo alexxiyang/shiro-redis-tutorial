@@ -25,12 +25,20 @@
 	    <dispatcher>ERROR</dispatcher>
 	</filter-mapping>
 
- <servlet>
-    <servlet-name>Login</servlet-name>
-    <servlet-class>org.crazycake.shiroredis.Login</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Login</servlet-name>
-    <url-pattern>/login/*</url-pattern>
-  </servlet-mapping>
+   <servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>org.crazycake.shiroredis.Login</servlet-class>
+    </servlet>
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>org.crazycake.shiroredis.Logout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/logout/*</url-pattern>
+	</servlet-mapping>
 </web-app>
