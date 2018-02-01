@@ -40,8 +40,11 @@ public class ExampleRealm extends AuthorizingRealm {
 	protected AuthenticationInfo doGetAuthenticationInfo(
 			AuthenticationToken token) throws AuthenticationException {
 		UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken)token;
+
+		AuthenticInfoExample authenticInfoExample = new AuthenticInfoExample();
+		authenticInfoExample.setUsername(usernamePasswordToken.getUsername());
 		// Expect password is "123456"
-		return new SimpleAuthenticationInfo(usernamePasswordToken.getUsername(), "123456", usernamePasswordToken.getUsername());
+		return new SimpleAuthenticationInfo(authenticInfoExample, "123456", usernamePasswordToken.getUsername());
 	}
 	
 	@PostConstruct
