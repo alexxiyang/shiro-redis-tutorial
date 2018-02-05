@@ -1,7 +1,6 @@
 package org.crazycake.shiroredis;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -16,7 +15,6 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import redis.clients.jedis.Jedis;
 
 /**
  * This realm is only for tutorial
@@ -41,10 +39,12 @@ public class ExampleRealm extends AuthorizingRealm {
 			AuthenticationToken token) throws AuthenticationException {
 		UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken)token;
 
-		AuthenticInfoExample authenticInfoExample = new AuthenticInfoExample();
-		authenticInfoExample.setUsername(usernamePasswordToken.getUsername());
+		UserInfo userInfo = new UserInfo();
+		userInfo.setUsername(usernamePasswordToken.getUsername());
+		userInfo.setAge(23);
+		userInfo.setCity("Paris");
 		// Expect password is "123456"
-		return new SimpleAuthenticationInfo(authenticInfoExample, "123456", usernamePasswordToken.getUsername());
+		return new SimpleAuthenticationInfo(userInfo, "123456", usernamePasswordToken.getUsername());
 	}
 	
 	@PostConstruct

@@ -37,20 +37,4 @@ public class Logout extends HttpServlet {
         // jump to login age
         response.sendRedirect("/index.html");
     }
-
-    public static void main(String[] args) {
-        int temp1 = 100;
-        int temp2 = 200;
-        int temp3 = temp1 + temp2;
-        List<String> array = new ArrayList();
-        array.add("1");
-        array.add("2");
-        for (int i = 0; i < array.size(); i++) {
-            String s =  array.get(i);
-            System.out.println(s);
-        }
-
-        System.out.println(temp3);
-        System.out.println(temp2);
-    }
 }

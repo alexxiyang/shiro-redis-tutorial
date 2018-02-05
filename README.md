@@ -22,6 +22,8 @@ redisManager.expire = 600
 redisManager.timeout = 0
 # Redis password.(Optional)
 #redisManager.password =
+# Redis database. Default value is 0(Optional)
+#redisManager.database = 0
 ```
 
 3. Run jetty
