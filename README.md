@@ -11,7 +11,7 @@ This tutorial use shiro.ini to configure `shiro` and `shiro-redis`.
 git clone https://github.com/alexxiyang/shiro-redis-tutorial.git
 ```
 2. Modify redis service connection configuration in src/main/resources/shiro.ini.
-Such as `redisManager.host`, `redisManager.port`, etc.
+Such as `redisManager.host`, `redisManager.expire`, etc.
 ```INI
 redisManager.host = 127.0.0.1
 # Redis port. Default value: 6379 (Optional)
