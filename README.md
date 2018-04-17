@@ -13,17 +13,8 @@ git clone https://github.com/alexxiyang/shiro-redis-tutorial.git
 2. Modify redis service connection configuration in src/main/resources/shiro.ini.
 Such as `redisManager.host`, `redisManager.expire`, etc.
 ```INI
-redisManager.host = 127.0.0.1
-# Redis port. Default value: 6379 (Optional)
-redisManager.port = 6379
-# Redis cache key/value expire time. Default value:0 .The expire time is in second (Optional)
-redisManager.expire = 600
-# Redis connect timeout. Timeout for jedis try to connect to redis server(In milliseconds).(Optional)
-redisManager.timeout = 0
-# Redis password.(Optional)
-#redisManager.password =
-# Redis database. Default value is 0(Optional)
-#redisManager.database = 0
+# Redis host. If you don't specify host the default value is 127.0.0.1:6379
+redisManager.host = 192.168.56.101:6379
 ```
 
 3. Run jetty
