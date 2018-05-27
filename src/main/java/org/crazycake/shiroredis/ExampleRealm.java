@@ -1,11 +1,13 @@
 package org.crazycake.shiroredis;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authc.credential.SimpleCredentialsMatcher;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.Subject;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -21,6 +23,10 @@ public class ExampleRealm extends AuthorizingRealm {
 	@Override
 	protected AuthorizationInfo doGetAuthorizationInfo(
 			PrincipalCollection principals) {
+		Subject subject = SecurityUtils.getSubject();
+		// get user and do whatever you want to do
+		UserInfo user = (UserInfo) subject.getPrincipal();
+
 		SimpleAuthorizationInfo authInfo = new SimpleAuthorizationInfo();
 		// only for tutorial
 		List<String> roles = new ArrayList<String>();
